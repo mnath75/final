@@ -8,7 +8,9 @@ else
 fi
 echo "path = "
 pwd
-source ./env/bin/activate
+if [ ./env/bin/activate ]
+then 
+    echo "file exist "
 
 
 pip3 install -r requirements.txt
