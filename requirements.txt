@@ -46,7 +46,7 @@ tqdm==4.64.1
 tzdata==2022.5
 tzlocal==4.2
 uritools>=3.0.1
-urllib3==1.26.12
+urllib3
 uuid==1.30
 virtualenv
 webencodings==0.5.1
