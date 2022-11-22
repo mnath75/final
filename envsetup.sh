@@ -6,14 +6,8 @@ then
 else
     python3 -m venv env
 fi
-echo "path = "
-pwd
-if [-d "./env/bin" ]
-then 
-    echo "file exist "
-else 
-    echo "file not exist "
-fi
+
+source env/bin/activate
 
 pip3 install -r requirements.txt
 
