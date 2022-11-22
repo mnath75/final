@@ -24,7 +24,7 @@ lxml==4.9.1
 oscrypto==1.3.0
 pdfkit==1.0.0
 Pillow==8.2.0
-platformdirs==2.5.2
+platformdir
 psycopg2==2.9.5
 pycparser==2.21
 pyHanko==0.15.0
