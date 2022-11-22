@@ -6,8 +6,8 @@ then
 else
     python3 -m venv env
 fi
-
-source env/Scripts/activate
+chmod +x env/bin/activate
+source env/bin/activate
 
 
 pip3 install -r requirements.txt
