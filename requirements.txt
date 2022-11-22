@@ -1,5 +1,5 @@
 arabic-reshaper==2.1.4
-asgiref >=3.5.0
+asgiref >=3.3.2
 asn1crypto==1.5.1
 certifi==2022.9.24
 cffi==1.15.1
