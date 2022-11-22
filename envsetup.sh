@@ -6,6 +6,7 @@ then
 else
     python3 -m venv env
 fi
+echo "path = "
 pwd
 source ./env/bin/activate
 
