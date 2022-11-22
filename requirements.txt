@@ -50,4 +50,4 @@ urllib3==1.26.12
 uuid==1.30
 virtualenv
 webencodings==0.5.1
-xhtml2pdf==0.2.8
+xhtml2pdf
