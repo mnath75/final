@@ -1,0 +1,89 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<style>
+    h5{
+        margin-top: 100px;
+        margin-left: 100px;
+        text-align: center;
+        color: rgb(18, 20, 20);
+    }
+    a{
+        text-align: center;
+    
+    }
+    
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 700px;
+  margin-left: 300px;
+  overflow-x:auto;
+  overflow-x:auto; 
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  overflow-x:auto ;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+  overflow-x:auto ;
+}
+
+.btn-btn-default{
+    text-align: center;
+    color: black;
+    background-color: aqua;
+    width: 50px;
+    border-radius: 5px;
+    text-align: center;
+}
+.a1:link, a:visited {
+  background-color: #f0ada8;
+  color: white;
+  padding: 4px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius:25px;
+}
+
+.a1:hover, a:active {
+  background-color: rgb(204, 163, 163);
+}
+</style>
+
+<h5>Homeopathy Medicine Essence </h5>
+<a href="{% url 'list'  %}"  class="a1" style=" color:rgb(0, 17, 255); float: right;"><i class="fa fa-pills"></i>List Of ALL Medicine </a>
+<form action="{% url 'book' %}" method="POST" role="form" style="margin-left: 300px; color:black; overflow-x:auto ">
+    {% csrf_token %}
+    <div class="form-group">
+        <div class="input-group">
+          {{ form.as_p }}
+          <span class="input-group-btn">
+              <button style="width: 70px;"type="submit" class="btn-btn-default" id="add-btn"><i class="fa fa-plus" aria-hidden="true" ></i>ADD</button>
+          </span>
+        </div>
+    </div>
+</form>
+
+<table>
+    <tr>
+        <th>Name Of Medicine</th>
+        <th>Options</th>
+      </tr>
+{% for b in books %}
+<tr>
+<td><a href = {% url 'myitem'  b.id  %} >{{ b }}</a></td>
+
+<td><a class="a1" href="{% url 'delitem'  b.id  %}"><i class="fa fa-trash" aria-hidden="true"></i>Delete </a></td>
+</tr>
+{% endfor %}
+
+</table>
+
+{% endblock %}

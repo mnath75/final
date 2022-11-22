@@ -1,0 +1,8 @@
+{% extends 'index.html' %}
+<h1>List of All Medicine</h1>
+<ul>
+{% for ls in ls %}
+<li><a href="{% url 'listdetails' ls.id %}" >{{ ls.name }} </a> </li>
+
+{% endfor %}
+</ul>

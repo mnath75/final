@@ -1,0 +1,1271 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WingsHomeoPathy</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
+	<link rel="stylesheet" href="{% static 'https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css' %}">
+    <link href="{% static 'https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css' %}">
+    <link rel="stylesheet" href="{% static 'https://unpkg.com/aos@next/dist/aos.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'css/clash-display.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+
+	<style type="text/css">
+		.container {
+			margin-top: 70px;
+		}
+		img{
+			width: 100%;
+			height: auto;
+		}
+		h2{
+			padding-top: 50px;
+		}
+		p{
+			font-size: 17px!important;
+		}
+		.hilight{
+			font-size:15px;
+			text-shadow: 10in;
+		
+		}
+	</style>
+</head>
+<body>
+
+  {% include "nav.html" %}
+<!--<div class="container">
+	<div class="row">
+	 <div class="col-sm-6 ">
+{% load static %}
+<img src="{% static './pexels.jpg' %}" alt="My image">
+  </div>
+		<div class="col"-sm-6>
+			<h2>Welcome to Wings Classical HomeoCare</h2>
+			<p class="lead">Mission
+				To create awareness among the masses regarding the importance of holistic principles to enhance one’s wellbeing.
+				<br>
+				To introduce and to promote the holistic principles in the existing health care practices.
+				<br>To encourage people to actively participate in their own health by giving proper importance to one’s psychological, emotional and spiritual status..
+.</p>		</div>
+
+	</div>
+</div>
+-->
+
+{% block content %}
+<style>
+	.hero{
+		background-color: url(../static/images/wings.mp4)
+	}
+
+	/* FONTS */
+@import url(../css/clash-display.css);
+
+/* VARIABLES */
+:root {
+    --c-dark: black;
+    --c-brand: #4e57d4;
+    --c-brand-light: #6970dd;
+    --c-brand-rgb: 78, 87, 212;
+    --c-body: #727272;
+    --font-base: "ClashDisplay", sans-serif;
+    --box-shadow: 0px 15px 25px rgba(0,0,0,0.08);
+    --transition: all 0.5s ease;
+}
+
+/* RESET & HELPERS */
+body {
+    font-family: var(--font-base);
+    line-height: 1.7;
+    color: var(--c-body);
+}
+
+h1, h2, h3,h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 600;
+    color: var(--c-dark);
+}
+
+a {
+    text-decoration: none;
+    color: var(--c-brand);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--c-brand-light);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-padding {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.theme-shadow {
+    box-shadow: var(--box-shadow);
+}
+
+/* IMAGE ZOOM */
+.image-zoom {
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.image-zoom-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.image-zoom-wrapper img{
+     transition: var(--transition);
+}
+
+.image-zoom:hover .image-zoom-wrapper img {
+    transform: scale(1.1);
+}
+
+
+/* NAVBAR */
+.navbar {
+    box-shadow: var(--box-shadow);
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: var(--c-dark);
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--c-brand);
+}
+
+
+/* BTN */
+.btn {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 10px 24px;
+}
+
+.btn-brand {
+    background-color: var(--c-brand);
+    border-color: var(--c-brand);
+    color: white;
+}
+
+.btn-brand:hover {
+    background-color: var(--c-brand-light);
+    border-color: var(--c-brand-light);
+    color: white;
+}
+
+
+/* HERO */
+#hero{
+	
+	background-color: #4e57d4;
+	
+}
+
+
+/* SECTION TITLE */
+.section-title {
+    margin-bottom:60px;
+}
+
+.section-title .line {
+    width: 60px;
+    height: 4px;
+    background-color: var(--c-brand);
+    margin: 16px auto 24px auto;
+}
+
+.section-title p {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ICONBOX */
+.iconbox {
+    width: 70px;
+    height: 70px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(var(--c-brand-rgb), 0.1);
+    color: var(--c-brand);
+    font-size: 34px;
+    flex: none;
+}
+
+/* SERVICE */
+.service {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.service::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background:rgb(116, 224, 224);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: var(--transition);
+}
+
+
+.service:hover::after {
+    width: 100%;
+    height: 100%;
+    background: var(--c-brand);
+    z-index: -1;
+}
+
+.service:hover h5,
+.service:hover p {
+    color:rgb(12, 145, 145);
+}
+
+.service:hover .iconbox {
+    background-color: rgba(195, 233, 183, 0.2);
+    color: white;
+}
+
+/* COUNTER */
+#counter {
+    background: linear-gradient(rgba(var(--c-brand-rgb), 0.8), rgba(var(--c-brand-rgb), 0.8)), url(../images/counter.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* PORTFOLIO */
+.portfolio-item .iconbox {
+    background-color: var(--c-brand);
+    color: rgb(149, 230, 146);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.portfolio-item:hover .iconbox {
+    opacity: 1;
+    top: 50%;
+}
+
+/* REVIEW */
+.review small {
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--c-brand);
+}
+
+.review-head {
+    position: relative;
+}
+
+.review-head::after {
+    content: "";
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    bottom: -14px;
+    background-color: white;
+    transform: rotate(45deg);
+}
+
+/* TEAM */
+.team-member-content {
+    background-color: var(--c-brand);
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    width: calc(100% - 50px);
+    transform: translateX(-50%);
+    padding: 24px;
+    transition: var(--transition);
+    opacity: 0;
+}
+
+.team-member:hover .team-member-content {
+    opacity: 1;
+    bottom: 24px;
+}
+
+/* CONTACT */
+#contact {
+    position: relative;
+    z-index: 2;
+}
+
+#contact::after {
+    content: "";
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(rgba(var(--c-brand-rgb), 0.8), rgba(var(--c-brand-rgb), 0.8)), url(../images/counter.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#contact .form-control {
+    border-radius: 0;
+}
+
+#contact .form-control:focus {
+    box-shadow: none;
+    border-color: var(--c-brand);
+}
+
+/* FOOTER */
+footer {
+    padding-top: 120px;
+}
+
+.footer-top {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-bottom {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+footer li,
+footer p,
+footer a {
+    color: rgba(255,255,255,0.7);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .line {
+    width: 40px;
+    height: 4px;
+    background-color: var(--c-brand);
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 100px;
+}
+
+.social-icons a:hover {
+    background-color: var(--c-brand);
+    color: white;
+}
+/* .card{
+	background-color: rgba(240, 12, 50, 0.897);
+	width: 300px;
+	height: 150px;
+	align-items: center;
+	position: relative;
+	padding:5px ;
+	margin-left:350px ;
+	border-radius:5px;
+} */
+#w1{
+	color: rgb(0, 0, 0);
+	font-size: 25px;
+	transition: all;
+	transform: none;
+	font-weight:bold;
+	margin: 5px;
+}
+.w2{
+	font-size: 15px;
+	font-weight: 15px;
+	font-style:italic;
+	border-style: hidden;
+	color: beige;	
+}
+.w3{
+	font-style: italic;
+	font-weight: 15px;
+}
+.img{
+	width: 50px;
+	height: 50px;
+}
+
+.w5{
+	font-style:italic;
+	font-size: 15px;
+	font-family: sans-serif;
+}
+/* .vdo{
+	background-color: url(../static/images/wings.mp4);
+	height:500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width:1400px;
+} */
+.vdo{
+
+
+	width: 100%;
+	margin-top:-60px;
+	background-size: cover;
+
+}
+.dr1{
+	align-items: center;
+	font-size:25px;
+	text-shadow: none;
+	text-align: center;
+	font-family: sans-serif;
+	font-style: var(--c-brand);
+}
+
+.dr2{
+	align-items: center;
+	font-size:20px;
+	text-shadow: none;
+	text-align: center;
+	font-family: sans-serif;
+	font-style: var(--c-brand);
+	color: blue;
+}
+
+.branch{
+	color: #4e57d4;
+	margin: 10px;
+	font-family: sans-serif;
+	font-weight: 15px;
+	font-style: italic;
+	background-color: rgb(197, 226, 226);
+	border-radius: 10px;
+
+}
+#services,#team,#about,#hero,#portfolio{
+	background-image: url(../static/images/wings_img3.jpg);
+}
+p{
+	color: black;
+}
+
+
+
+.myaccordion {
+  max-width: 500px;
+  margin: 50px auto;
+  box-shadow: 0 0 1px rgba(0,0,0,0.1);
+}
+
+.myaccordion .card,
+.myaccordion .card:last-child .card-header {
+  border: none;
+}
+
+.myaccordion .card-header {
+  border-bottom-color: #EDEFF0;
+  background: transparent;
+}
+
+.myaccordion .fa-stack {
+  font-size: 18px;
+}
+
+.myaccordion .btn {
+  width: 100%;
+  font-weight: bold;
+  color: #004987;
+  padding: 0;
+}
+
+.myaccordion .btn-link:hover,
+.myaccordion .btn-link:focus {
+  text-decoration: none;
+}
+
+.myaccordion li + li {
+  margin-top: 10px;
+}
+</style>
+<section id="hero" class="min-vh-100 d-flex align-items-center text-center">
+	<div class="container">
+		<div>
+			<!--<video class="vdo" preload="auto" control loop autoplay muted><source src="../static/images/wings.mp4" type="video/mp4"></video>-->
+			<div>
+				<video class="vdo" preload="auto" control loop autoplay muted><source src="../static/images/wings.mp4" type="video/mp4"></video>
+				<!--<div class="text-white mt-3 mb-4" data-aos="fade-right"><span class="w3" >Reviving life - mind ,body & spirit</span> </div>
+				<!-- <div>
+					<video class="vdo" preload="auto" control loop autoplay muted><source src="../static/images/wings.mp4" type="video/mp4"></video>
+				</div>  -->
+				<!---
+						<div class="text-white mt-3 mb-4" data-aos="fade-right"><span class="w3" >Reviving life - mind ,body & spirit</span> </div>
+						<div class="text-white mt-3 mb-4" data-aos="fade-right"><span class="w4">Venture Of Shree Sai Homeopathy</span> </div>
+				</div>--->
+				<!--<img src="{% static '/images/wingslogo1.jpg' %}" alt="My image">-->
+				<!--<h5 class="text-white mt-3 mb-4" data-aos="fade-right">Reviving Life - Mind Body & Spirit </h5>
+				-->
+				<div data-aos="fade-up" data-aos-delay="50">
+					<!--<a href="{% url 'appontment'%}" class="btn btn-brand me-2">Get Appointmant</a>-->
+					<a href="#footer" class="btn btn-light ms-2"><h4>For Appointment</h4>Call Us</a>
+					<h5 id="visite" class="text-white mt-3 mb-4" data-aos="fade-right" style="text-decoration-style:italic; color: black;">To Visit Us<span class="w5"><i class='fa fa-hand-point-right' style='font-size:48px;color:red'></i>  click the Link</span><a href="http://www.wingshomeopathy.com/" class="btn btn-brand me-2">Wings Classical Homeopathy</a></h5>
+					
+					<!--<a href="{% url 'ordermedi1cine' %}" class="btn btn-light ms-2">Order Medicine</a>-->
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center" data-aos="fade-down" data-aos-delay="50">
+				<div class="section-title">
+					<h5 class="display-4 fw-semibold">About Doctor</h5>
+					<div class="line"></div>
+					<p>" Service to the Patient is Service to Nation "</p>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-between align-items-center">
+			<div class="col-lg-6" data-aos="fade-down" data-aos-delay="50">
+				<img src="{% static '/images/Dr_santosh_yadav.png' %}" alt="My image">
+				<h3 class="dr1">Dr. Santosh K Yadav</h1>
+				<h3 class="dr2">M.D. (Homeopathy)</h3>
+				<h3 class="dr2">Ph.D.(Homeopathy)</h3>
+			</div>
+			<div data-aos="fade-down" data-aos-delay="150" class="col-lg-5">
+				<h5>About Dr. Santosh K Yadav</h5>
+				<p class="mt-3 mb-4" style="color: black;">Dr. Santosh K Yadav is a consultant homeopathic doctor is flourishing homeopathic clinical practice in Dombivali and Mulund <span class="year">since 2000</span>. All across India patient consulting him from various state and world wide. he is known too thousands of patients as a kind and lively homeopathy doctor.
+					<br><br>
+					He is president of Wings medical foundation.
+					He completed his BHMS (Bachelor of Homeopathic Medicine & Surgery) from Amravati university and done his post graduation( M.D Homoeopathy ) from aurangabad university.He also done Ph.D. in Homoeopathy field .
+					
+				<!--<div class="d-flex pt-4 mb-3">
+					<div class="iconbox me-4">
+						<i class="ri-mail-send-fill"></i>
+					</div>
+					<div>
+						<h5>We are Awesome</h5>
+						<p>Providing Online Conlsultansy and Advise The people of Nation</p>
+					</div>
+				</div>
+				<div class="d-flex mb-3">
+					<div class="iconbox me-4">
+						<i class="ri-user-5-fill"></i>
+					</div>
+					<div>
+						<h5>We are Awesome</h5>
+						<p>Consectetur adipisicing elit. Corporis nesciunt aut temporibus!</p>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div class="iconbox me-4">
+						<i class="ri-rocket-2-fill"></i>
+					</div>
+					<div>
+						<h5>We are Awesome</h5>
+						<p>Consectetur adipisicing elit. Corporis nesciunt aut temporibus!</p>
+					</div>
+				</div>-->
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section-padding border-top">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+				<div class="section-title">
+					<h1 class="display-4 fw-semibold">Awesome Services</h1>
+					<div class="line"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row g-4 text-center">
+			<div id="accordion" class="myaccordion">
+				<div class="card">
+				  <div class="card-header" id="headingOne">
+					<h2 class="mb-0">
+					  <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+						Skin Diseases
+						<span class="fa-stack fa-sm">
+						  <i class="fas fa-circle fa-stack-2x"></i>
+						  <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
+						</span>
+					  </button>
+					</h2>
+				  </div>
+				  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+					<div class="card-body">
+					  <ul>
+						<li>Dermatitis</li>
+						<li>Eczema</li>
+						<li>Psoriasis</li>
+						<li>Herpes Zoster</li>
+						<li>Urticaria</li>
+						<li>Chilblains</li>
+						<li>Ringworms</li>
+						<li>Corn</li>
+						<li>Warts</li>
+						<li>Leucoderma/Vitiligo</li>
+					  </ul>
+					</div>
+				  </div>
+				</div>
+				<div class="card">
+				  <div class="card-header" id="headingTwo">
+					<h2 class="mb-0">
+					  <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						Physical Diseases
+						<span class="fa-stack fa-2x">
+						  <i class="fas fa-circle fa-stack-2x"></i>
+						  <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
+						</span>
+					  </button>
+					</h2>
+				  </div>
+				  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+					<div class="card-body">
+					  <ul>
+						<li>RespiratoryDiseases Upper/Respiratory Diseases</li>
+						<li>Lower Respiratory Diseases</li>
+						<li>Joints and Muscles Diseases</li>
+						<li>Spondylisis</li>
+						<li>Gastro Intestinal</li>
+						<li>Renal Diseases</li>
+						<li>Endricology Diseases</li>
+						<li>Diseases Of Brain</li>
+						<li>Diseases Of Heart</li>
+						<li>Fatty Diseases</li>
+						<li>Hepatitis B</li>
+						<li>others</li>
+					  </ul>
+					</div>
+				  </div>
+				</div>
+				<div class="card">
+				  <div class="card-header" id="headingThree">
+					<h2 class="mb-0">
+					  <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+						Research
+						<span class="fa-stack fa-2x">
+						  <i class="fas fa-circle fa-stack-2x"></i>
+						  <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
+						</span>
+					  </button>
+					</h2>
+				  </div>
+				  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+					<div class="card-body">
+					  <ul>
+						<li>Astrophysics</li>
+						<li>Informatics</li>
+						<li>Criminology</li>
+						<li>Economics</li>
+					  </ul>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			<!--<div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="150">
+				<div class="service theme-shadow p-lg-5 p-4">
+					<div class="iconbox"><img src="{% static '/images/skin1.jpg' %}">
+						<i class="ri-pen-nib-fill"></i>
+					</div>
+					<h5 class="mt-4 mb-3">Skin Diseases</h5>
+					
+					<p>Eczema is a generalized term that encompasses various inflammatory skin conditions. It is used synonymously with the term "Dermatitis" which means superficial inflammatio</p>
+				</div>
+			</div>-->
+			<div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="250">
+				<div class="service theme-shadow p-lg-5 p-4">
+					<div class="iconbox"><img src="{% static '/images/skin2.jpg' %}">
+						<i class="ri-stack-fill"></i>
+					</div>
+					<h5 class="mt-4 mb-3">Children Diseases</h5>
+					<p>Autism is a complex developmental disability that typically appears during the first three years of life and affects a person's ability to communicate and interact with others.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="350">
+				<div class="service theme-shadow p-lg-5 p-4">
+					<div class="iconbox"><img src="{% static '/images/skin3.jpg' %}">
+						<i class="ri-ruler-2-fill"></i>
+					</div>
+					<h5 class="mt-4 mb-3">Gynaecology Diseases</h5>
+					<p>What is Fibroadenoma Breast or Fibrocystic Disease or Fibroadenosis
+					</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="450">
+				<div class="service theme-shadow p-lg-5 p-4">
+					<div class="iconbox"><img src="{% static '/images/skin4.jpg' %}">
+						<i class="ri-pie-chart-2-fill"></i>
+					</div>
+					<h5 class="mt-4 mb-3">Physically Diseases</h5>
+					<p>If you constantly suffer from blocked or a stuffy feeling in the nose, reduced or complete loss of smell and constantly running or dripping of mucus in the nose, there are chances</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="550">
+				<div class="service theme-shadow p-lg-5 p-4">
+					<div class="iconbox"><img src="{% static '/images/skin5.jpg' %}">
+						<i class="ri-code-box-line"></i>
+					</div>
+					<h5 class="mt-4 mb-3">Mental Diseases</h5>
+					<p>It has been seen that Mental Retardation & CP Cerebral Palsy go together. IF the damage is in motor area of the cerebral cortex, it causes aberrations and difficulties in motor movements of body. we call it cerebral palsy.</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="650">
+				<div class="service theme-shadow p-lg-5 p-4">
+					<div class="iconbox"><img src="{% static '/images/pexels.jpg' %}">
+						<i class="ri-user-2-fill"></i>
+					</div>
+					<h5 class="mt-4 mb-3">Male Disorder</h5>
+					<p>Feeling of alarm or “worry” or impending doom. It may be specific or non-specific in nature.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- COUNTER 
+<section id="counter" class="section-padding">
+	<div class="container text-center">
+		<div class="row g-4">
+			<div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="150">
+				<h1 class="text-white display-4">90,00+</h1>
+				<h6 class="text-uppercase mb-0 text-white mt-3">Total Downloads</h6>
+			</div>
+			<div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="250">
+				<h1 class="text-white display-4">58K+</h1>
+				<h6 class="text-uppercase mb-0 text-white mt-3">Trusted Clients</h6>
+			</div>
+			<div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="350">
+				<h1 class="text-white display-4">5M+</h1>
+				<h6 class="text-uppercase mb-0 text-white mt-3">Themes Designed</h6>
+			</div>
+			<div class="col-lg-3 col-sm-6" data-aos="fade-down" data-aos-delay="450">
+				<h1 class="text-white display-4">100+</h1>
+				<h6 class="text-uppercase mb-0 text-white mt-3">Team Members</h6>
+			</div>
+		</div>
+	</div>
+</section>-->
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+				<div class="section-title">
+					<h1 class="display-4 fw-semibold">Our Portfolio</h1>
+					<div class="line"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row g-4">
+			<div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+				<div class="portfolio-item image-zoom">
+					<div class="image-zoom-wrapper">
+						<img src="{% static '/images/image-1.jpeg' %}" alt="My image">
+					</div>
+					<a href="static '/images/image-1.jpeg'" data-fancybox="gallery" class="iconbox"><i class="ri-search-2-line"></i></a>
+				</div>
+				<div class="portfolio-item image-zoom mt-4">
+					<div class="image-zoom-wrapper">
+						<img src="{% static '/images/image-2.jpeg' %}" alt="My image">
+					</div>
+					<a href="static '/images/image-2.jpeg'" data-fancybox="gallery" class="iconbox"><i class="ri-search-2-line"></i></a>
+				</div>
+			</div>
+			<div class="col-md-4" data-aos="fade-down" data-aos-delay="250">
+				<div class="portfolio-item image-zoom">
+					<div class="image-zoom-wrapper">
+						<img src="{% static '/images/image-4.jpeg' %}" alt="My image">
+					</div>
+					<a href="static '/images/image-4.jpeg'" data-fancybox="gallery" class="iconbox"><i class="ri-search-2-line"></i></a>
+				</div>
+				<div class="portfolio-item image-zoom mt-4">
+					<div class="image-zoom-wrapper">
+						<img src="{% static '/images/image-5.jpeg' %}" alt="My image">
+					</div>
+					<a href="static '/images/image-5.jpeg'" data-fancybox="gallery" class="iconbox"><i class="ri-search-2-line"></i></a>
+				</div>
+			</div>
+			<div class="col-md-4" data-aos="fade-down" data-aos-delay="350">
+				<div class="portfolio-item image-zoom">
+					<div class="image-zoom-wrapper">
+						<img src="{% static '/images/image-3.jpeg' %}" alt="My image">
+					</div>
+					<a href="static '/images/image-3.jpeg'" data-fancybox="gallery" class="iconbox"><i class="ri-search-2-line"></i></a>
+				</div>
+				<div class="portfolio-item image-zoom mt-4">
+					<div class="image-zoom-wrapper">
+						<img src="{% static '/images/image-7.jpeg' %}" alt="My image">
+					</div>
+					<a href="static '/images/image-7.jpeg'" data-fancybox="gallery" class="iconbox"><i class="ri-search-2-line"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- REVIEW 
+<section id="reviews" class="section-padding bg-light">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+				<div class="section-title">
+					<h1 class="display-4 fw-semibold">Testimonials</h1>
+					<div class="line"></div>
+					<p>We love to care and nurtur of people of nation</p>
+				</div>
+			</div>
+		</div>
+		<div class="row gy-5 gx-4">
+			<div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="150">
+				<div class="review">
+					<div class="review-head p-4 bg-white theme-shadow">
+						<div class="text-warning">
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+						</div>
+						<p>What do Say our patients</p>
+					</div>
+					<div class="review-person mt-4 d-flex align-items-center">
+						<img src="{% static '/images/avatar-1.jpg' %}" alt="My image">
+						<div class="ms-3">
+							<h5>M Nath</h5>
+							<small>Skin Patient</small>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="250">
+				<div class="review">
+					<div class="review-head p-4 bg-white theme-shadow">
+						<div class="text-warning">
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+						</div>
+						<p>Amazing theme ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum animi rerum ipsam impedit dicta voluptatem.</p>
+					</div>
+					<div class="review-person mt-4 d-flex align-items-center">
+						<img src="{% static '/images/avatar-2.jpg' %}" alt="My image">
+						<div class="ms-3">
+							<h5>Mohit Yadav</h5>
+							<small>Gynaecology Patient</small>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="350">
+				<div class="review">
+					<div class="review-head p-4 bg-white theme-shadow">
+						<div class="text-warning">
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+						</div>
+						<p>Amazing theme ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum animi rerum ipsam impedit dicta voluptatem.</p>
+					</div>
+					<div class="review-person mt-4 d-flex align-items-center">
+						<img class="rounded-circle" src="./assets/images/avatar-3.jpg" alt="">
+						<div class="ms-3">
+							<h5>Dianne Russell</h5>
+							<small>UX Architect</small>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="450">
+				<div class="review">
+					<div class="review-head p-4 bg-white theme-shadow">
+						<div class="text-warning">
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+						</div>
+						<p>Amazing theme ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum animi rerum ipsam impedit dicta voluptatem.</p>
+					</div>
+					<div class="review-person mt-4 d-flex align-items-center">
+						<img class="rounded-circle" src="./assets/images/avatar-4.jpg" alt="">
+						<div class="ms-3">
+							<h5>Dianne Russell</h5>
+							<small>UX Architect</small>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="550">
+				<div class="review">
+					<div class="review-head p-4 bg-white theme-shadow">
+						<div class="text-warning">
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+						</div>
+						<p>Amazing theme ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum animi rerum ipsam impedit dicta voluptatem.</p>
+					</div>
+					<div class="review-person mt-4 d-flex align-items-center">
+						<img src="{% static '/images/avatar-5.jpg' %}" alt="My image">
+						<div class="ms-3">
+							<h5>Rita Dubey</h5>
+							<small>Attendent</small>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-sm-6" data-aos="fade-down" data-aos-delay="650">
+				<div class="review">
+					<div class="review-head p-4 bg-white theme-shadow">
+						<div class="text-warning">
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+							<i class="ri-star-fill"></i>
+						</div>
+						<p>Amazing theme ipsum dolor sit amet consectetur adipisicing elit. Assumenda eum animi rerum ipsam impedit dicta voluptatem.</p>
+					</div>
+					<div class="review-person mt-4 d-flex align-items-center">
+						<img src="{% static '/images/avatar-6.jpg' %}" alt="My image">
+						<div class="ms-3">
+							<h5>Pooja Bhandari</h5>
+							<small>Pharmasist</small>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>-->
+
+<!-- TEAM -->
+<section id="team" class="section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+				<div class="section-title">
+					<h1 class="display-4 fw-semibold">Our Branches</h1>
+					<div class="line"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row g-4 text-center ">
+			<div class="col-md-6" data-aos="fade-down" data-aos-delay="150">
+				<div class="team-member image-zoom">
+					<div class="image-zoom-wrapper">
+						<!--<img src="{% static '/images/wingslogo1.jpg' %}" alt="My image">-->
+						<div>
+							<img src="{% static '/images/wingslogo1.jpg' %}" alt="My image">
+							<p class="branch">Address : 102, "Sanvi Appartment", 1st Floor, Above Samarth Classes, Near Shiv Sena Office, Gupte Road, Dombivali (W).
+							<br>Time : 9.30 am to 2 pm & 5.30 pm to10 pm.
+							<br>Tel : 0251 - 2492081 / 2484950(Clinic) Mobile : +91-8080899990, +91 9892064974  Email : wingshomeopathy@gmail.com</p>
+						</div>
+					</div>
+					<div class="team-member-content">
+						<h4 class="text-white">Dr. Santosh K Yadav</h4>
+						<p class="mb-0 text-white">Founder Of Wings Classical Homeopathy(Dombivli)</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6" data-aos="fade-down" data-aos-delay="250">
+				<div class="team-member image-zoom">
+					<div class="image-zoom-wrapper">
+						<!--<img src="{% static '/images/wingslogo1.jpg' %}" alt="My image">-->
+						<div>
+							<img src="{% static '/images/wingslogo1.jpg' %}" alt="My image">
+							<p class="branch">Address : Kapeesh Mall, Shop No.18, 19, 20, 1st Floor, M.G. Road, Near Mulund Railway Station, Mulund (W).
+								<br>Time : 2.30 pm to 5 pm. Sunday - 10.30 am to 4.30 pm.
+								<br>Tel : 022 - 25628989 (Clinic) Mobile : +91-8080848403, +91 9892064974 Email : wingshomeopathy@gmail.com</p>
+						</div>
+					</div>
+					<div class="team-member-content">
+						<h4 class="text-white">Dr. Santosh K Yadav</h4>
+						<p class="mb-0 text-white">Founder Of Wings Classical Homeopathy(Mulund)</p>
+					</div>
+				</div>
+			</div>
+			<!--<div class="col-md-4" data-aos="fade-down" data-aos-delay="350">
+				<div class="team-member image-zoom">
+					<div class="image-zoom-wrapper">
+						<img src="{% static '/images/person-3.jpg' %}" alt="My image">
+					</div>
+					<div class="team-member-content">
+						<h4 class="text-white">Mohi Yadav</h4>
+						<p class="mb-0 text-white">Pharmasist</p>
+					</div>
+				</div>-->
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- CONTACT -->
+<section class="section-padding bg-light" id="contact">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+				<div class="section-title">
+					<h1 class="display-4 text-white fw-semibold">Get in touch</h1>
+					<div class="line bg-white"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-center" data-aos="fade-down" data-aos-delay="250">
+			<div class="col-lg-8">
+				<form action="#" class="row g-3 p-lg-5 p-4 bg-white theme-shadow">
+					<div class="form-group col-lg-6">
+						<input type="text" class="form-control" placeholder="Enter first name">
+					</div>
+					<div class="form-group col-lg-6">
+						<input type="text" class="form-control" placeholder="Enter last name">
+					</div>
+					<div class="form-group col-lg-12">
+						<input type="email" class="form-control" placeholder="Enter Email address">
+					</div>
+					<div class="form-group col-lg-12">
+						<input type="number" class="form-control" placeholder="Enter Phone ">
+					</div>
+					<div class="form-group col-lg-12">
+						<input type="text" class="form-control" placeholder="Enter subject">
+					</div>
+					<div class="form-group col-lg-12">
+						<textarea name="message" rows="5" class="form-control" placeholder="Enter Message"></textarea>
+					</div>
+					<div class="form-group col-lg-12 d-grid">
+						<button class="btn btn-brand">Send Message</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+ <!-- BLOG 
+ <section id="blog" class="section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+				<div class="section-title">
+					<h1 class="display-4 fw-semibold">Recent News & Articles</h1>
+					<div class="line"></div>
+					<p>We love to craft digital experiances for brands rather than crap and more lorem ipsums and do crazy skills</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+				<div class="team-member image-zoom">
+					<div class="image-zoom-wrapper">
+						<img src="{% static '/images/blog-post-1.jpg' %}" alt="My image">
+					</div>
+					<h5 class="mt-4">Web Design 2022</h5>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sequi quos magni!</p>
+					<a href="#">Read More</a>
+				</div>
+			</div>
+			<div class="col-md-4" data-aos="fade-down" data-aos-delay="250">
+				<div class="team-member image-zoom">
+					<div class="image-zoom-wrapper">
+						<img src="{% static '/images/blog-post-2.jpg' %}" alt="My image">
+					</div>
+					<h5 class="mt-4">Web Design 2022</h5>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sequi quos magni!</p>
+					<a href="#">Read More</a>
+				</div>
+			</div>
+			<div class="col-md-4" data-aos="fade-down" data-aos-delay="350">
+				<div class="team-member image-zoom">
+					<div class="image-zoom-wrapper">
+						<img src="{% static '/images/blog-post-3.jpg' %}" alt="My image">
+					</div>
+					<h5 class="mt-4">Web Design 2022</h5>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sequi quos magni!</p>
+					<a href="#">Read More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>-->
+
+
+ <!-- FOOTER -->
+    <footer class="bg-dark">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-3 col-sm-6">
+                        <!--<img src="{% static '/images/logo.png' %}" alt="My image">-->
+                        <div class="line"></div>
+                        <p>" Service To Patient is Service To Nation "</p>
+                        <div class="social-icons">
+							<a href="#"><i class="fa fa-whatsapp" aria-hidden="true" background_color="blue" color="blue"></i></a>
+							<a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+							<a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+							<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <h6 class="mb-0 text-white">SERVICES</h6>
+						<p>All Types Of Chronic Diseases.
+                        <div class="line"></div>
+                        <!--<ul>
+                            <li><a href="#">Consultancy</a></li>
+                            <li><a href="#">Advice</a></li>
+                            <li><a href="#">Treatment</a></li>
+                            <li><a href="#">About</a></li>
+							<li><a href="#">Blog</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Hospital</a></li>
+                            <li><a href="#">Career</a></li>
+                        </ul>-->
+                    </div>
+                    <!--<div class="col-lg-3 col-sm-6">
+                        <h5 class="mb-0 text-white">ABOUT</h5>
+                        <div class="line"></div>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Hospital</a></li>
+                            <li><a href="#">Career</a></li>
+							<li><a href="#">Blog</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Hospital</a></li>
+                            <li><a href="#">Career</a></li>
+                        </ul>
+                    </div>-->
+                    <div class="col-lg-3 col-sm-6">
+                        <h6 class="mb-0 text-white">DOMBIVALI  Branch-1</h6>
+                        <div class="line"></div>
+                        <ul>
+                            <li>Address	:	102, "Sanvi Appartment", 1st Floor,
+                                Near Shiv Sena Office, Gupte Road, Dombivali (W).</li>
+                            <li>Time	:<div>	9.30 am to 2 pm </div> 
+								<div> 5.30 pm to 10 pm.</div>
+                            <li>Tel	:	<div>0251 - 2492081 / 2484950</div>
+                                Mobile	:<div>+91-8080899990, +91 9892064974</div>
+								Email	:<div>	wingshomeopathy@gmail.com</div>
+								<div>Visit Us : <a href="www.wingshomeopathy.com">www.wingshomeopathy.com</a></div>
+							</li>
+                        </ul>
+                    </div>
+
+					<div class="col-lg-3 col-sm-6">
+                        <h6 class="mb-0 text-white">MULUND  Branch-2</h6>
+                        <div class="line"></div>
+                        <ul>
+                            <li>Address	:	Kapeesh Mall, Shop No. 17 ,18, 19, & 20, 1st Floor, M.G. Road,
+								Near Mulund Railway Station, Mulund (W).</li>
+                            <li>Time	:	<div>2.30 pm to 5 pm.</div>
+								<div>Sunday- 10.30 am to 4.30 pm.<div>
+									<div style="color: yellow;">Thursday -Closed</div>
+								</li>
+                            <li>Tel	:<div>	022 - 25628989</div> 
+								Mobile	:<div>	+91-8080848403, +91 9892064974</div>
+								Email	:<div>	wingshomeopathy@gmail.com</div></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row g-4 justify-content-between">
+                    <div class="col-auto">
+                        <p class="mb-0">© Copyright WingsHomeopathy. All Rights Reserved</p>
+                    </div>
+                    <div class="col-auto">
+                        <p class="mb-0">Designed with 💜 By <a href="https://www.snteducation.com/">Snt Super Net Technology Munirka Delhi(New)</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script src="{% static 'assests/js/main.js' %}"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" ></script>
+
+	<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+{% endblock content  %}
+
+
+
+
+
+
+
+
+
+<!--JS Library -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="static/js/main.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" ></script>
+</body>
+</html>

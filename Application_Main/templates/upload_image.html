@@ -1,0 +1,193 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    
+    <style>
+      *{
+        margin: 0; padding: 0;
+        box-sizing: border-box;  
+      }
+      .container{
+        position: relative;
+        min-height: 100vh;
+        background: #ddd;
+        
+      }
+      .container h1{
+        font-size: 40px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: normal;
+        padding: 15px;
+        color: rgb(76, 212, 117);
+        text-align: center;
+        text-transform: capitalize;
+
+      }
+      .container .image-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        padding: 10px;
+        overflow: auto;
+      }
+      .container .image-container .image{
+        height: 250px;
+        width: 350px;
+        border: 5px solid #fff;
+        box-shadow: 0,5px,150px rgba(0,0,0,0.1);
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .container .image-container .image img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: .25 linear;
+      }
+      .container .image-container .image:hover img{
+        transform: scale(1.1);
+      }
+      .container .popup-image{
+        position: fixed;
+        top: 0;left: 0;
+        background: rgba(0,0,0,0.9);
+        height: 100%;
+        width: 100%;
+        z-index: 100;
+        display: none;
+        
+
+        overflow: auto;
+    
+      }
+      .container .popup-image span{
+        position: absolute;
+        top: 0;right: 0;
+        font-size: 60px;
+        font-weight: border;
+        color: #fff;
+        cursor: pointer;
+        z-index: 100%;
+
+      }
+      .popup-image img{
+        position: absolute;
+        top: 0%;left: 50%;
+        transform: translate(-50%,50%);
+        border: 5px solid #fff;
+        border-radius: 5px;
+        width: 500px;
+        object-fit: cover;
+
+      }
+    @media(max-width:768px)
+    {
+      .container  .popup-image img{
+        width: 95%;
+
+      }
+    }
+    </style>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <!--<div class="card-group">
+        <div class="card">
+          <img class="card-img-top" src="#" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="#" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="..." alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ 0
+    /<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    -->
+
+    <div class="container">
+      <!--<div class="image">
+        <form action="" method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <input type="file" name="images" multiple>
+          <button>Upload</button>
+      </form>
+      <hr>
+      {% for img in images %}
+      <img src="{{img.images.url}}" alt="Image">
+      {% endfor %}
+      </div>-->
+    
+      <h1>Image Gallery</h1>
+      <div class="image-container">
+        <div class="image"><img src="{% static '/images/hero-1.jpg' %}" alt=""></div>
+        <div class="image"><img src="{% static '/images/hero-2.jpg' %}" alt="My image"></div>
+        <!--  <div class="desc">
+            <label for="birthday">Date</label>
+            <input type="date" id="birthday" name="birthday"></div>
+          <div>
+            <label for="birthday">Description:</label>
+            <input type="text" id="birthday" name="birthday">
+          </div>-->
+        <div class="image"><img src="{% static '/images/logo.png' %}" alt="My image"></div>
+        <div class="image"><img src="{% static '/images/avatar-1.jpg' %}" alt="My image" alt=""></div>
+        <div class="image"><img src="{% static '/images/avatar-2.jpg' %}" alt="My image"></div>
+        <div class="image"><img src="{% static '/images/avatar-3.jpg' %}" alt="My image"></div>
+
+
+        <div class="image"><img src="{% static '/images/logo.png' %}" alt="My image"></div>
+        <div class="image"><img src="{% static '/images/avatar-1.jpg' %}" alt="My image" alt=""></div>
+        <div class="image"><img src="{% static '/images/avatar-2.jpg' %}" alt="My image"></div>
+        <div class="image"><img src="{% static '/images/avatar-3.jpg' %}" alt="My image"></div>
+
+        <div class="image"><img src="{% static '/images/logo.png' %}" alt="My image"></div>
+        <div class="image"><img src="{% static '/images/avatar-1.jpg' %}" alt="My image" alt=""></div>
+        <div class="image"><img src="{% static '/images/avatar-2.jpg' %}" alt="My image"></div>
+        <div class="image"><img src="{% static '/images/avatar-3.jpg' %}" alt="My image"></div>
+      </div>
+      <div class="popup-image">
+        <span>&times</span>
+        <img src="{% static '/logo.png' %}" alt="My image">
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll('.image-container img').forEach(image=>{
+        image.onclick = () =>{
+          document.querySelector('.popup-image').style.display='block';
+          document.querySelector('.popup-image img').src=image.getAttribute('src');
+
+        }
+      });
+      document.querySelector('.popup-image span').onclick = ()=>{
+      document.querySelector('.popup-image').style.display='none';
+      }
+    </script>
+
+  </body>
+</html>

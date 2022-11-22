@@ -1,0 +1,19 @@
+.body{
+    background-color: rgb(150, 207, 233);
+}
+.h1{
+    text-align: center;
+    color: aqua;
+}
+.img{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+.p{
+    text-align:right;
+    color: brown;
+    font-size: medium;
+    font-family: sans-serif;
+    text-decoration: dashed;
+}

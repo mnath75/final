@@ -1,0 +1,28 @@
+
+<h2 style="text-align: centre; margin-left: 500px;">This is Patient Details</h2>
+
+{% load static %}
+
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+<script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+
+
+<h3 style="text-align: centre; margin-right: 200px; margin-left:200px; background-color: rgb(114, 212, 143);">{{ article.title }}
+
+<hr>
+
+{{ article.content|safe }}
+
+<hr>
+
+{{ article.content_upload|safe }}
+
+<hr>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.media }}
+    {{ form.as_p }}
+
+    <button style="text-align:centre;">Save Change</button>
+</form>

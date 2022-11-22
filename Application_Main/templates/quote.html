@@ -1,0 +1,152 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style type="text/css">
+    #add-btn{
+      text-align: center;
+      color: aqua;
+      background-color: rgb(201, 184, 184);
+      font-size: 15px;
+      padding: 5px;
+      width: 300px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius:20px!important;
+
+    }
+		input,select{
+      background-color: rgb(106, 240, 240);
+      color: black;
+			width: 300px!important;
+			border-radius: 20px!important;
+		}
+		form{
+			margin: 20px auto;
+			width: 300px;
+			height: 200px;
+			text-align: center;
+		}
+		select{
+			height:10px;
+		}
+		button{
+			width: 240px;
+			border-radius: 0px!important;
+		}
+    h3{
+      text-align: center;
+      color: blue;
+    }
+    .table{
+      width: 1000px;
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-size: 0.9em;
+      font-family: sans-serif;
+      min-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      margin-left: 300px;
+    }
+    .table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    }
+    .table th,
+    .table td {
+      padding: 12px 15px;
+    }
+    .table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+
+.table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+
+.a1:link, a:visited {
+  background-color: #e7a09a;
+  color: white;
+  padding: 4px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius:25px;
+}
+
+.a1:hover, a:active {
+  background-color: rgb(204, 163, 163);
+}
+
+	</style>
+</head>
+<body>
+
+  {% include 'nav.html' %}
+
+  <form action="{% url 'quote' %}" method="POST" role="form">
+    {% csrf_token %}
+    <div class="form-group">
+        <div class="input-group">
+          {{ form }}
+          <span class="input-group-btn">
+              <button type="submit" class="btn btn-default" id="add-btn"><i class="fa fa-plus" aria-hidden="true"></i>ADD</button>
+          </span>
+        </div>
+    </div>
+</form>
+<form action="{% url 'quote' %}" method="get">
+    <input
+      type="search"
+      name="q"
+      placeholder="Search by name or quote..."
+      class="form-control"
+    />
+  </form>
+  <h3><i class="fa-sharp fa-solid fa-person-dots-from-line"></i>List Of All Symptoms </h3>
+<table class="table">
+    <thead>
+      <tr>
+    
+        <th scope="col">Diseases</th>
+        <th scope="col">Cause</th>
+        <th scope="col">Action</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+        {% for item in  quote %}
+      <tr>
+       
+        <td>{{item.test}}</td>
+        <td>{{ item.cause }}</td>
+        <td><a class="a1" href="{% url 'delete_quote' id=item.id %}"><i class="fa fa-trash" aria-hidden="true"></i>Delete</a></td>
+      </tr>
+      {%  endfor %} 
+      </tbody>
+      </table>
+</body>
+<!--JS Library 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" ></script>
+</body>
+</html>
+-->
+{% endblock %}

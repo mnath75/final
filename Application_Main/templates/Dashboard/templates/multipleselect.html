@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+<title>Home</title>
+<link rel="stylesheet" type="text/css" href="{% static 'virtual-select.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+<style>
+
+*,*:after,*:before{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+	font-family: arial;
+	font-size: 16px;
+	margin: 0;
+	background: #0f4dff;
+	background: #003ce9;
+	background: #0276ad;
+
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+#multi_option{
+	max-width: 100%;
+	width: 350px;
+}
+label{
+	display:block;
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+.vscomp-toggle-button{
+	padding: 10px 30px 10px 10px;
+	border-radius: 5px;
+}
+
+</style>
+</head>
+<body>
+
+<div>
+	<label>Multiple Select</label>
+	<select id="multi_option" multiple name="native-select" placeholder="Native Select" data-silent-initial-value-set="false">
+	  <option value="1">HTML</option>
+	  <option value="2">CSS</option>
+	  <option value="3">JavaScript</option>
+	  <option value="4">Python</option>
+	  <option value="5">JAVA</option>
+	  <option value="6">PHP</option>
+	</select>
+</div>
+
+
+<script type="text/javascript" src="{% static 'virtual-select.min.js'%}"></script>
+<script type="text/javascript">
+	VirtualSelect.init({ 
+	  ele: '#multi_option' 
+	});
+</script>
+</body>
+</html>

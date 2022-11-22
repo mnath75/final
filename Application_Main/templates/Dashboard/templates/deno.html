@@ -1,0 +1,1104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+                    
+            ul {
+            column-count: 5;
+            column-gap: 2rem;
+            list-style: none;
+            }
+
+            /* ADDITIONAL STYLING */
+
+            /* The container */
+            .container {
+            display: block;
+            font-family: Montserrat;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 18px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            }
+
+            /* Hide the browser's default checkbox */
+            .container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+            }
+
+            /* Create a custom checkbox */
+            .checkmark {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: aqua;
+            }
+
+
+            /* When the checkbox is checked, add a blue background */
+            .container input:checked ~ .checkmark {
+            background-color: #c90000;
+            }
+
+            /* Create the checkmark/indicator (hidden when not checked) */
+            .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+            }
+
+            /* Show the checkmark when checked */
+            .container input:checked ~ .checkmark:after {
+            display: block;
+            }
+
+            /* Style the checkmark/indicator */
+            .container .checkmark:after {
+            left: 7px;
+            top: 2px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+            }
+        h3{
+            text-align: center;
+            color: black;
+            text-decoration: underline;
+            text-overflow: ellipsis;
+            margin-top: 25px;
+            text-shadow: 0cm;
+            padding-bottom: 15px;
+        }
+    </style>
+        
+
+        
+    <title>checkbox</title>
+  </head>
+  <body>
+    <div class = "container">
+        <div class="row">
+          <div class="col-12">
+            <h3>Personality Character:-1 </h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <ul>  
+              <H4>A</H4>
+             <li>
+                <label class="container">Absentminded
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Active
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Amiable
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Angry
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>B</H4>
+             <li>
+              <label class="container">Benevolence
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+           </li>
+              <H4>C</H4>
+              <li>
+                <label class="container">Company(Like/Dislike)
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>  
+             <H4>E</H4>
+             <li>
+                <label class="container">Energetic
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Extrovert
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              <H4>F</H4>
+             <li>
+                <label class="container">Forsaken
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <li>
+                <label class="container">Greedy
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Hurried
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>I</H4>
+             <li>
+                <label class="container">Indifferent
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Impatient
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Impetuous
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Introvert
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             
+             <li>
+                <label class="container">Irritable
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>J</H4>
+             <li>
+                <label class="container">Jealous
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>M</H4>
+             <li>
+                <label class="container">Methodical
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Mild
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+
+             <li>
+                <label class="container">Mild
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Morose
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>N</H4>
+             <li>
+                <label class="container">Neat(clean)
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Negative(Pessimistic)
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>O</H4>
+             <li>
+                <label class="container">Organised
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>P</H4>
+             <li>
+                <label class="container">Positive(Optimistic)
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Punctual
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>Q</H4>
+             <li>
+                <label class="container">Quarrelsome
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>R</H4>
+             <li>
+                <label class="container">Restless
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>S</H4>
+             <li>
+                <label class="container">Sentimental(Weepy)
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Slow
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+              <li>
+                <label class="container">Sluggish
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Sociable
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Stubborn
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Suspicious
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Sympathetic
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>T</H4>
+             <li>
+                <label class="container">Talkative
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>U</H4>
+             <li>
+                <label class="container">Untidy(Unclean)
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class = "container">
+        <div class="row">
+          <div class="col-12">
+            <h3>Personality Character:-2</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <ul>  
+              <H4>A</H4>
+             <li>
+                <label class="container">Absentminded
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Affectionate
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Aggressive
+                  <input type="checkbox">
+                  <span class="checkmark"1111></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Ambitious
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+              <li>
+                <label class="container">Amiable
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>  
+             <li>
+                <label class="container">Anxious
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Artistic
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Assertive
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>B</H4>
+             <li>
+                <label class="container">Bossy
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Broods
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+
+             <li>
+                <label class="container">Bubbly
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <h4>C</h4>
+             <li>
+                <label class="container">Careful
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Caring
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Cautious
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             
+             <li>
+                <label class="container">Changeable
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Collection
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Compassionate
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Comptitive
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+
+             <li>
+                <label class="container">Lack of Confidence
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Confident
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Conscientious
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Conservative
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             
+             <li>
+                <label class="container">Considerate
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Conventional
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Creative
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>D</H4>
+             <li>
+                <label class="container">Discontented
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+
+             <li>
+                <label class="container">Dutiful
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>E</H4>
+             <li>
+                <label class="container">Easy Going
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Emotional
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+              <li>
+                <label class="container">Excitable
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Extrovert
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>F</H4>
+             <li>
+                <label class="container">Family Oriented
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Fault Finding
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Fearful
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <li>
+                <label class="container">Friendly
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <li>
+                <label class="container">Fun loving
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>G</H4>
+             <li>
+                <label class="container">Generous
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>H</H4>
+             <li>
+                <label class="container">Hesitant
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Homely
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Honest
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+              <li>
+                <label class="container">Humorous
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              <H4>I</H4>
+             <li>
+                <label class="container">Impatience
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Independant
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Fears Insects and spiders
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Intolerent
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <li>
+                <label class="container">Introvert
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <li>
+                <label class="container">Irritable
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>j</H4>
+             <li>
+                <label class="container">Jealous
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>K</H4>
+             <li>
+                <label class="container">Kind
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>L</H4>
+             <li>
+                <label class="container">Loving
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Loyal
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>M</H4>
+              <li>
+                <label class="container">Materialistic
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Messy
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Mild
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Moaning
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+              
+             <li>
+                <label class="container">Moody
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <li>
+                <label class="container">Lack of Motivation
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>N</H4>
+             <li>
+                <label class="container">Negative Attitude
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <H4>O</H4>
+             <li>
+                <label class="container">Optimistic
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                </label>
+             </li>
+             <li>
+              <label class="container">OutGoing
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+           </li>
+           <H4>P</H4>
+           <li>
+              <label class="container">Passionate
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+           </li>
+            
+           <li>
+              <label class="container">Perceptive
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+           </li>
+           <li>
+              <label class="container">Perfectionist
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+           </li>
+           <li>
+              <label class="container">Pessimistic
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+           </li>
+           <li>
+              <label class="container">Planner
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+           </li>
+           <li>
+              <label class="container">Wants to please
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+           </li>
+            
+           <li>
+              <label class="container">Precocious
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+           </li>
+            <H4>S</H4>
+           <li>
+              <label class="container">Strong Principled
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+           </li>
+            
+            <li>
+              <label class="container">Private
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+           </li>
+           <H4>Q</H4>
+           <li>
+              <label class="container">Avoids , Quarrel
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+           </li>
+           <H4>R</H4>
+           <li>
+              <label class="container">Reliable
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+           </li>
+            
+           <li>
+              <label class="container">Resentful
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+           </li>
+            
+           <li>
+              <label class="container">Reserved
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+           </li>
+           <li>
+              <label class="container">Restless
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+           </li>
+           <li>
+              <label class="container">Risks Avoids
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+           </li>
+           <li>
+              <label class="container">Romantic
+                <input type="checkbox">
+                <span class="checkmark"></span>
+              </label>
+           </li>
+           <li>
+            <label class="container">Perceptive
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+         </li>
+         <li>
+            <label class="container">Perfectionist
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+         </li>
+         <li>
+            <label class="container">Pessimistic
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+         </li>
+         <li>
+            <label class="container">Planner
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+         </li>
+         <li>
+            <label class="container">Wants to please
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+         </li>
+          
+         <li>
+            <label class="container">Precocious
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+         </li>
+          
+         <li>
+            <label class="container">Strong Principled
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+         </li>
+          
+          <li>
+            <label class="container">Private
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+         </li>
+          
+         <li>
+            <label class="container">Avoids Quarrel
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+         </li>
+          
+         <li>
+            <label class="container">Reliable
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+         </li>
+          
+         <li>
+            <label class="container">Resentful
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+         </li>
+          
+         <li>
+            <label class="container">Reserved
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+         </li>
+         <li>
+            <label class="container">Restless
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+         </li>
+         <li>
+            <label class="container">Risks Avoids
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+         </li>
+         <li>
+            <label class="container">Romantic
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+         </li>
+         <li>
+          <label class="container">Follows Routine
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+       </li>
+       <li>
+          <label class="container">Safe Person
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+       </li>
+       <li>
+          <label class="container">Selfish
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+       </li>
+       <li>
+          <label class="container">Sensitive
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+       </li>
+       <li>
+          <label class="container">Sentimental
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+       </li>
+        
+       <li>
+          <label class="container">Serious
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+       </li>
+        
+       <li>
+          <label class="container">Sincere
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+       </li>
+        
+        <li>
+          <label class="container">Shy
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+       </li>
+        
+       <li>
+          <label class="container">Sociable
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+       </li>
+        
+       <li>
+          <label class="container">Sociable friendly
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+       </li>
+        
+       <li>
+          <label class="container">Soft
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+       </li>
+        
+       <li>
+          <label class="container">Desires Solitude
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+       </li>
+       <li>
+          <label class="container">Stubborn
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+       </li>
+       <li>
+          <label class="container">Superstitious
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+       </li>
+       <li>
+          <label class="container">Sympathetic
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+       </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+  </body>
+</html>

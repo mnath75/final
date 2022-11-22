@@ -1,0 +1,115 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<!--<style>
+    h1{
+        margin-top:100px;
+        text-align: center;
+    }
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+</style>-->
+<style>
+    h5{
+        margin-top: 100px;
+        margin-left:0px;
+        text-align: center;
+        color:blue;
+    }
+    a{
+        text-align: center;
+    
+    }
+    
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 800px;
+  margin-left: 300px;
+  overflow-x:auto;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.btn-btn-default{
+    text-align: center;
+    color: black;
+    background-color: aqua;
+    width: 50px;
+    border-radius: 5px;
+    text-align: center;
+}
+.form-group{
+  margin-left: 300px;
+  width: 800px;
+
+}
+
+
+</style>
+
+<h5 style="margin-top:100px;">Homoeopathy Geeta </h5>
+
+<form action="{% url 'myitem' pk %}" method="POST">
+  {% csrf_token %}
+  <div class="form-group">                  
+    <input type="text" class="form-control" placeholder="Enter Name" name="name"><br>
+    <input type="text" class="form-control" placeholder="Enter heading1" name="head1"><br>
+    <input type="text" class="form-control" placeholder="Enter head2" name="head2"><br>
+    <button type="submit" class="btn btn-primary">ADD</button>
+  </div>             
+  
+</form>
+
+
+
+
+<!--
+<form action="{% url 'myitem' pk %}" method="POST" >
+    {% csrf_token %}
+    <div class="form-group">
+        <div class="input-group">
+          {{ form.as_p}}
+          <span class="input-group-btn">
+              <button type="submit" class="btn btn-default" id="add-btn">ADD</button>
+          </span>
+        </div>
+    </div>
+</form>
+-->
+<table>
+    
+
+{% for b in item %}
+<tr>
+<td><a href = "{% url 'itemDetail' b.id %} " >{{ b }}</a></td>
+
+<td><a href="{% url 'delitem2'  id=b.id pk=pk  %}">delete</a></td>
+</tr>
+{% endfor %}
+
+</table>
+
+{% endblock %}

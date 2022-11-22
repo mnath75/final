@@ -1,0 +1,132 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .table1 {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-left: 300px;
+  overflow-x:auto;
+  margin-top: 150px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 800px;
+  margin-left: 300px;
+  overflow-x:auto;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  margin-left: 300px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+  margin-left: 300px;
+}
+
+h5,h2{
+    margin-left: 100px;
+    text-align: center;
+    margin-left: 300px;
+}
+.form-control{
+  width: 800px;
+}
+
+.a1:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 4px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius:25px;
+
+}
+
+.a1:hover, a:active {
+  background-color: rgb(204, 163, 163);
+}
+
+    </style>
+
+</head>
+<body>
+    <table class="table1">
+        <tr><td>
+
+            <form  method="GET" action="{% url 'ess' id %}">
+                <div class="form-group">                  
+                  <input type="text" class="form-control" placeholder="Enter Essencial" name="name1"><br>
+                  <input type="text" class="form-control" placeholder="Enter heading1" name="name2"><br>
+                  <input type="text" class="form-control" placeholder="Enter head2" name="name3"><br>
+                  <input type="text" class="form-control" placeholder="Enter Analysis" name="name4"><br>
+                  <button type="submit" class="btn btn-primary">Enter Essencial</button>
+                </div>             
+                
+              </form>
+        </td>    
+    </tr>
+    </table>
+    <table>
+    <hr>
+    
+    <hr>
+    <table>
+    <tr><td><h5>{{ it.name }}</h5></td></tr>
+    <br>
+    <br>
+    </table>
+    <table>
+    <tr><td>{% for e in essence %}</td></tr>
+    <tr><td><h5><i>{{e.name }}</i></h5></td></tr>
+    <tr><td><a class="a1" href="{% url 'deless'  id=e.id  pk=id %}">delete</a></td></tr> 
+    </table>
+    {% endfor %}
+    <h2>Concepts</h2>
+    <table>
+    <tr><th>{{it.head1}}</th><th>{{it.head2}}</th></tr>
+    <tr><td><ul>
+        {% for hi in head1 %}
+        <li>{{hi.name  }}</li><a  class="a1" href="{% url 'delh1'  id=hi.id  pk=id %}">delete</a> 
+        {% endfor %}
+    </ul></td>
+    <td><ul>
+        {% for hi in head2 %}
+        <li>{{hi.name  }}</li><a  class="a1" href="{% url 'delh2'  id=hi.id pk=id %}">delete</a> 
+        {% endfor %}
+    </ul></td>
+
+</tr>
+
+    </table>
+
+<table>
+<tr>
+    <td><h3>Analysis :- </h3></td>
+<tr>
+<ul>
+    {% for an in analysis %}
+    <li>{{an}}</li><a class="a1" href="{% url 'delan'  id=an.id  pk=id %}">delete</a> 
+
+    {% endfor%}
+</ul>
+</tr>
+</body>
+</html>
+
+{% endblock %}

@@ -1,0 +1,219 @@
+{% extends 'index.html' %}
+{% block content %}
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
+-->
+<style type="text/css">
+    #add-btn{
+      text-align: center;
+      color: aqua;
+      background-color: rgb(236, 221, 221);
+      font-size: 15px;
+      padding: 5px;
+      width: 300px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius:20px!important;
+    }
+		input,select{
+      background-color: rgb(106, 240, 240);
+      color: black;
+			width: 300px!important;
+			border-radius: 20px!important;
+		}
+		form{
+			margin: 20px auto;
+			width: 300px;
+			height: 200px;
+			text-align: center;
+		}
+		select{
+			height:10px;
+		}
+		button{
+			width: 240px;
+			border-radius: 0px!important;
+		}
+    h3{
+      text-align: center;
+      color: blue;
+    }
+    .table{
+      border-collapse: collapse;
+      margin: 25px 0;
+      font-size: 0.9em;
+      font-family: sans-serif;
+      min-width: 400px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      width: 1000px;
+      margin-left: 300px;
+    }
+    .table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    }
+    .table th,
+    .table td {
+      padding: 12px 15px;
+    }
+    .table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+
+.table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.button {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 50px;
+  float: right;
+}
+
+/* CSS */
+.button-3 {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  float: right;
+}
+
+.button-3:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button-3:hover {
+  background-color: #2c974b;
+}
+
+.button-3:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.button-3:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button-3:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+.a1:link, a:visited {
+  background-color: #f1a6a0;
+  color: white;
+  padding: 4px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius:25px;
+  float: right;
+}
+
+.a1:hover, a:active {
+  background-color: rgb(204, 163, 163);
+  float: right;
+}
+
+
+
+
+	</style>
+</head>
+<body>
+
+
+  {% include "nav.html" %}
+
+  <form action="{% url 'Gnm_Sbs_Conflicts' %}" method="POST" role="form">
+    {% csrf_token %}
+    <div class="form-group">
+        <div class="input-group">
+          {{ form }}
+          <span class="input-group-btn">
+              <button type="submit" class="btn btn-default" id="add-btn"><i class="fa fa-plus" aria-hidden="true"></i>ADD</button>
+          </span>
+        </div>
+    </div>
+</form>
+<form action="{% url 'Gnm_Sbs_Conflicts' %}" method="get">
+    <input
+      type="search"
+      name="q"
+      placeholder="Search by name or quote..."
+      class="form-control"
+    />
+  </form>
+  <h3>List Of All Symptoms </h3>
+<table class="table">
+    <thead>
+      <tr>
+    
+        <th scope="col">Organs</th>
+        <th scope="col">Biological conflicts</th>
+        <th scope="col">Actions</th>
+
+        
+      </tr>
+    </thead>
+    <tbody>
+        {% for item in  quote %}
+      <tr>
+       
+        <td>{{item.Organs}}</td>
+        <td>{{ item.Conflicts }}</td>
+        <td><a  class="a1" href="{% url 'delete_organs' id=item.id %}"><i class="fa fa-trash" aria-hidden="true"></i>Delete</a></td>
+      </tr>
+      {%  endfor %} 
+      </tbody>
+      </table>
+</body>
+<!--JS Library 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" ></script>
+</body>
+</html>
+-->
+{% endblock %}

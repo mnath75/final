@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Apointments Details </title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
+	<style type="text/css">
+		.card-body{
+			text-align: center;
+		}
+		.card{
+			height: 200px;
+		}
+		button{
+      width: 100%;
+    }
+	</style>
+	</head>
+<body>
+ {% include "nav.html" %}
+ <div class="container mt-5">
+ <h2 class="text-center alert alert-danger">Prescription Details of  </h2>
+
+ <div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			
+			</div>
+	  	
+	</div>
+		<hr class = 'primary'>
+			<table class="table">
+	  <thead>
+	
+		<tr>
+		  
+		  <th scope="col">Medicine</th>
+		  <th scope="col">Potency</th>
+		  <th scope="col">Date</th>
+		  <th scope="col">Duration</th>
+		 <!-- <th scope="col">Branch</th>
+		  <th scope="col">Details</th>-->
+		</tr>
+	  </thead>
+	  <tbody>
+		{% for d in data2 %}
+		<tr>
+		  
+		  <td>{{d.medicine}} </td>
+		<!--  <td> {{ data.docterid.name }} </td>-->
+		  <td>{{ d.potency}}  </td>
+	
+	
+		  <!-- <td> {{ data.patientid.name }}</td> -->
+		  <td> {{d.date}} </td>
+		  <td> {{d.durations}}</td>
+
+		  <td>
+			<a class="btn btn-primary" href="" title="Edit ">
+				<i class="fa fa-edit"></i>
+			</a>
+		</td>
+		<td>
+			<a class="btn btn-secondary" href="" title="Delete ">
+				<i class="fa fa-trash"></i>
+			</a>
+		</tr>
+		{% endfor %}
+		
+	  </tbody>
+	</table>
+	
+	  </div>
+	</div>
+	</div>
+
+
+
+
+ </div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" ></script>
+</body>
+</html>
+
+ 

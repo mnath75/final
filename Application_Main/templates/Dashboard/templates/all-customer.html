@@ -1,0 +1,77 @@
+﻿{% extends 'index.html' %}
+
+	{% block content %}
+	<h3>Patients Chief Complaints </h3>
+		<div class="page-wrapper">
+			<div class="content container-fluid">
+				<div class="page-header">
+					<div class="row align-items-center">
+						<div class="col">
+							<div class="mt-5">
+								<h4 class="card-title float-left mt-2">Chief Complaints</h4> <a href="{% url 'add_question'  %}" class="btn btn-primary float-right veiwbutton">Add Questions</a> </div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="card card-table">
+							<div class="card-body booking_card">
+								<div class="table-responsive">
+									<table class="datatable table table-stripped table table-hover table-center mb-0">
+									
+												<h6>Q-1:</h6>
+										{% for i in obj %}
+        								<p> {{ i.question }} </p>
+       									 <h6>Answer</h6>
+										{% endfor %}
+        								<form>
+          									<div class="form-group">
+           										 <textarea class="form-control" rows="5" id="comment"></textarea>
+          									</div>
+        								</form>
+
+
+											<h6>Q-2:</h6>
+											<p>Any Medication Taken for Above Symptoms Since  How Many Years ?</p>
+											<h6>Answer</h6>
+											<form>
+											  <div class="form-group">
+												<textarea class="form-control" rows="5" id="comment"></textarea>
+											  </div>
+											</form>
+											
+											<h6>Q-3: Origin Of Cause.</h6>
+											<p>Can you trace the origin of illness:started may be from any particular ,circumstance , accidental , medication error in diet , over exertion, exposure to cold , heat etc ?</p>
+											<h6>Answer</h6>
+											<form>
+												<div class="form-group">
+													<textarea class="form-control" rows="5" id="comment"></textarea>
+												</div>
+												<button type="button" class="btn btn-primary" style="align-items:centre;">Save</button>
+												<button type="button" class="btn btn-primary" style="float: right;">Next</button>
+											</form>
+								
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="delete_asset" class="modal fade delete-modal" role="dialog">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-body text-center"> <img src="assets/img/sent.png" alt="" width="50" height="46">
+							<h3 class="delete_class">Are you sure want to delete this Asset?</h3>
+							<div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
+								<button type="submit" class="btn btn-danger">Delete</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endblock %}

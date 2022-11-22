@@ -1,0 +1,241 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<title>Wings Classical Homeopathy</title>
+	<link rel="shortcut icon" type="image/x-icon" href="{% static 'img/WingsLogo.jpg' %}">
+	<link rel="stylesheet" href="{% static 'assests/css/bootstrap.min.css'%}">
+	<link rel="stylesheet" href="{% static 'assests/plugins/fontawesome/css/fontawesome.min.css'%}">
+	<link rel="stylesheet" href="{% static 'assests/plugins/fontawesome/css/all.min.css'%}">
+	<link rel="stylesheet" href="{% static 'assests/css/feathericon.min.css' %}">
+	<link rel="stylehseet" href="https://cdn.oesmith.co.uk/morris-0.5.1.css">
+	<link rel="stylesheet" href="{% static 'assests/plugins/morris/morris.css' %}">
+	<link rel="stylesheet" href="{% static 'assests/css/style.css'%}"> 
+
+	<style>
+		.sidenav {
+  height:100%px;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(196, 221, 196);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  margin-top:56px;
+  border-radius: 5px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size:20px;
+  color:black;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: black;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.card1{
+	background-color: rgb(224, 224, 133);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  	padding: 25px;
+  	text-align: center;
+}
+.card2{
+	background-color: rgb(191, 191, 243);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  	padding: 25px;
+  	text-align: center;
+}
+
+.card3{
+	background-color: rgb(169, 236, 236);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  	padding: 25px;
+  	text-align: center;
+}
+
+</style>
+
+
+
+</head>
+<body>
+
+
+	
+	<div class="main-wrapper">
+		{% include "nav.html" %}
+	
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="{% url 'create_patient'  %}">Create Patients</a>
+			<a href="{% url 'patients_details' user=user %}">Patients Details</a>
+			<a href="{% url 'create_appointment' user=user %}">Create Appointments</a>
+			<a href="{% url 'appointment_details' user=user %}">Appointments Details</a>
+			<a href="{% url 'repeat_medicicne' user=user %}">Repete Medicine</a>
+			<a href="{% url 'courier_medicicne' user=user %}">Courier Medicine</a>
+			<a href="{% url 'courier_medicicne' user=user %}">Online Consultation</a>
+		</div>
+		  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+
+
+
+	<div class="card-group">
+		<div class="card">
+		
+		  <div class="card1">
+			<h5 class="card-title">Total Appointments</h5>
+			<h5>{{ Total }}</h5>
+			
+		  </div>
+		</div>
+		<div class="card">
+		  <div class="card2">
+			<h5 class="card-title"> Appointments Done</h5>
+			<h5>{{ Done }}</h5>
+	  
+			  
+		  </div>
+		</div>
+		<div class="card">
+		  <div class="card3">
+			<h5 class="card-title">Upcoming Appointments</h5>
+			<h5>{{ Pending }}</h5>
+	  
+			
+		  </div>
+		</div>
+	  </div>
+	  <br>
+	  <!----
+	  <div class="container">
+	  	<div class="row">
+		  	<div class="col-sm">
+			  <a href="{% url 'create_appointment' user=user %}" class="btn btn-primary" id="hello">Create Appointment</a>
+			  <table class="table">
+		<thead>
+	  
+		  <tr>
+			<th scope="col">Date</th>
+			<th scope="col">Time</th>
+			<th scope="col">Docter</th>
+			<th scope="col">Patient</th>
+			<th scope="col">Status</th>
+			<th scope="col">Action</th>
+	  
+		  </tr>
+		</thead>
+		<tbody>
+				  {% for data in all_data %}
+		  <tr>
+			<th scope="row">{{ data.date }}</th>
+			<td> {{ data.time }}</td>
+			<td> {{ data.docterid.name }} </td>
+			<td> {{ data.patientid.name }}</td>
+			{% if data.status %}
+			<td>Completed</td>
+			{% else %}
+			<td>Pending</td>
+			{% endif %}
+			<td> <a   class="btn btn-danger" href="{% url 'update_status' id=data.id %}">Done</td>
+	  
+	  
+		  </tr>
+		  {% endfor %}
+		 
+		</tbody>
+	  </table>
+		  </div>
+	  
+	  
+		<!-- Last patients -->
+		<!--<div class="col-sm">
+		  <a href="{% url 'create_patient'  %}" class="btn btn-primary" id="hello">Create Patient</a>
+		  <table class="table">
+		<thead>
+	  
+		  <tr>
+			<th scope="col">Name</th>
+			<th scope="col">Phone</th>
+			<th scope="col">Email</th>
+			<th scope="col">Gender</th>
+			<th scope="col">Age</th>
+	  
+	  
+	  
+		  </tr>
+		</thead>
+		<tbody>
+			  {% for data in last_patients %}
+		  <tr>
+			
+			<td> {{ data.name }}</td>
+			<td> {{ data.phone }} </td>
+			<td> {{ data.email }}</td>
+			<td> {{ data.gender }}</td>
+			<td> {{ data.age }}</td>
+	  
+	  
+	  
+				  <td scope="col"><a class="btn btn-primary" href="{% url 'update_patient' id=data.id %}" >Update</a></td>
+			<td scope="col"><a class="btn btn-danger" href="{% url 'delete_patient' id=data.id %}" >Delete</a></td>
+	  
+		  </tr>
+		  {% endfor %}
+	  
+	  
+	  
+	  
+	  
+		</tbody>
+	  
+	  </table>
+		</div>-->
+	  </div>
+	  </div>
+	  
+	  <script>
+	  function openNav() {
+		document.getElementById("mySidenav").style.width = "250px";
+	  }
+	  
+	  function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+	  }
+	  </script>
+	</div>
+	<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+	<script src="assets/js/jquery-3.5.1.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="assets/plugins/raphael/raphael.min.js"></script>
+	<script src="assets/plugins/morris/morris.min.js"></script>
+	<script src="assets/js/chart.morris.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>
