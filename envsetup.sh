@@ -11,7 +11,7 @@ source env/bin/activate
 echo "ENV SETUP "
 
 
-pip3 install -r requirements.txt
+pip3.6 install -r requirements.txt
 
 if [ -d "logs" ] 
 then
