@@ -6,7 +6,7 @@ then
 else
     python3 -m venv env
 fi
-
+echo "$PWD"
 source env/bin/activate
 echo "ENV SETUP "
 
