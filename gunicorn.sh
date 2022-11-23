@@ -4,6 +4,8 @@ source env/bin/activate
 
 cd /var/lib/jenkins/workspace/final/Application_Main
 
+echo "migration start"
+
 python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py collectstatic -- no-input
