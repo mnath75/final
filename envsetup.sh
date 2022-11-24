@@ -6,7 +6,7 @@ then
 else
     python3 -m venv env
 fi
-cd ./var/lib/jenkins/workspace/final
+cd /var/lib/jenkins/workspace/final
 source env/bin/activate
 echo "ENV SETUP "
 
