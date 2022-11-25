@@ -1,4 +1,4 @@
-sudo cp -rf Application_Main.conf /etc/nginx/sites-available/app
+sudo cp -rf Application_Main.conf /etc/nginx/sites-available/Application_Main
 chmod 710 /var/lib/jenkins/workspace/final
 
 sudo ln -s /etc/nginx/sites-available/Application_Main /etc/nginx/sites-enabled
