@@ -1,5 +1,5 @@
 sudo cp -rf Application_Main.conf /etc/nginx/sites-available/Application_Main
-chmod 710 /var/lib/jenkins/workspace/final
+chmod 777 /var/lib/jenkins/workspace/final
 
 sudo ln -s /etc/nginx/sites-available/Application_Main /etc/nginx/sites-enabled
 sudo nginx -t

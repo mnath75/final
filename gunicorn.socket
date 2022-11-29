@@ -12,4 +12,3 @@ SocketUser=www-data
 
 [Install]
 WantedBy=sockets.target
-Footer

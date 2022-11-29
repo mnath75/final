@@ -4,9 +4,9 @@ Requires=gunicorn.socket
 After=network.target
 
 [Service]
-User=root
+User=jenkins
 Group=www-data
-WorkingDirectory=/var/lib/jenkins/workspace/final/Application_Main
+WorkingDirectory=/var/lib/jenkins/workspace/final
 
 ExecStart=/var/lib/jenkins/workspace/final/env/bin/gunicorn --workers 3 --log-level debug --error-logfile /var/lib/jenkins/workspace/django-cicd/error.log --bind unix:/run/gunicorn.sock app.wsgi:application
 
@@ -14,6 +14,5 @@ ExecStart=/var/lib/jenkins/workspace/final/env/bin/gunicorn --workers 3 --log-le
 WantedBy=multi-user.target
 
 
-[Install]
-WantedBy=multi-user.target
-Footer
+
+
