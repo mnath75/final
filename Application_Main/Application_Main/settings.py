@@ -12,6 +12,13 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
+def look_folder_tree(root):
+    result = ()
+    for dir_name, sub_dirs, file_names in os.walk(root):
+        for sub_dir_name in sub_dirs:
+            result += (os.path.join(dir_name, sub_dir_name),)
+    return result
+PROJECT_DIR = os.path.dirname(__file__)
 
 APPEND_SLASH=False
 
@@ -142,20 +149,10 @@ STATIC_URL = '/static/'
 #STATIC_URL = '/assests/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media/report')
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+STATICFILES_DIRS = look_folder_tree(STATIC_ROOT)
 
-]
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    '/var/www/static/',
-]
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, "assests")
-
-# ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
