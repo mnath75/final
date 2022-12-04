@@ -140,7 +140,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+STATIC_ROOT = '/var/lib/jenkins/workspace/final'
 #STATIC_URL = '/assests/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media/report')
