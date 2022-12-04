@@ -12,13 +12,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 
-def look_folder_tree(root):
-    result = ()
-    for dir_name, sub_dirs, file_names in os.walk(root):
-        for sub_dir_name in sub_dirs:
-            result += (os.path.join(dir_name, sub_dir_name),)
-    return result
-PROJECT_DIR = os.path.dirname(__file__)
 
 APPEND_SLASH=False
 
@@ -37,7 +30,7 @@ SECRET_KEY = 'kyo3zp1q6x)=p=@1s=yzx)e88(5seb(m_p3@15#7g)anazl!as'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','34.100.192.167']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -145,14 +138,20 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 #STATIC_URL = '/assests/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media/report')
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
-STATICFILES_DIRS = look_folder_tree(STATIC_ROOT)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
 
+]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "assests")
 
+# ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
